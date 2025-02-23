@@ -54,19 +54,16 @@ function toggleDetail(index) {
 }
 
 function toggleSubDetail(slideIndex, subIndex) {
-    // ซ่อนรายละเอียดทั้งหมดก่อน
+
     let allSubDetails = document.querySelectorAll(`#slide-${slideIndex} .sub-detail`);
     allSubDetails.forEach(subDetail => subDetail.classList.add("hidden"));
     
-    // ซ่อนรายการทั้งหมดก่อน
     let allListItems = document.querySelectorAll(`#slide-${slideIndex} ul li`);
     allListItems.forEach(listItem => listItem.classList.remove("active"));
 
-    // แสดงหรือซ่อนหัวข้อย่อยที่คลิก
     let subDetail = document.getElementById(`sub-${slideIndex}-${subIndex}`);
     subDetail.classList.toggle("hidden");
     
-    // แสดง/ซ่อนรายการที่คลิก
     let listItem = document.querySelectorAll(`#slide-${slideIndex} ul li`)[subIndex];
     listItem.classList.toggle("active");
 }
