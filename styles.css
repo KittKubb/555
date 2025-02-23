@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background 2s ease-in-out, color 2s ease-in-out;
+}
+
+#title-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#login-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ffcc00;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clickable {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #00ccff;
+}
+
+#presentation-container {
+    width: 60%;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+    font-size: 24px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* ให้ข้อความย่อยจัดเรียงในแนวตั้ง */
+    align-items: flex-start; /* จัดเรียงข้อความให้เริ่มจากซ้าย */
+}
+
+.sub-detail {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+ul li.active {
+    background: rgba(0, 255, 255, 0.4);
+}
